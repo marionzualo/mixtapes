@@ -9,7 +9,7 @@ class PlaylistImporter
 
   def playlists
     spotify_monthly_playlists.map do |spotify_playlist|
-      Playlist.new(uri: spotify_playlist.uri, date: date(spotify_playlist))
+      Playlist.new(uri: spotify_playlist.uri, date: date(spotify_playlist), name: spotify_playlist.name)
     end
   end
 
