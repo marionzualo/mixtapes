@@ -9,7 +9,7 @@
   </p>
 </article>
 <ul class="pl3 pl5-ns pr3 pr5-ns pb3 pb5-ns list">
-  <% Playlist.order("date desc").all.each do |playlist| %>
+  <% Playlist.latest.all.each do |playlist| %>
     <li>
       <%= render partial: 'playlist', locals: { playlist: playlist } %>
     </li>
