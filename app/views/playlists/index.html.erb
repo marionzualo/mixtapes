@@ -1,3 +1,15 @@
-<% Playlist.order("date desc").all.each do |playlist| %>
-  <%= render partial: 'playlist', locals: { playlist: playlist } %>
-<% end %>
+<article class="pl3 pl5-ns pr3 pr5-ns pb3 pb5-ns">
+  <h1 class="f3 f1-m f1-l">Mário's Mixtapes</h1>
+  <p class="measure lh-copy">
+    There was a time when I used to burn CDs with my favourite tracks.
+  </p>
+  <p class="measure lh-copy">
+    I don't have a CD player anymore but the passion for collecting music hasn't faded away. Nowadays I like to record
+    some of the things I hear in monthly Spotify playlists. This page is a digital home for these playlists.
+  </p>
+</article>
+<article class="pl3 pl5-ns pr3 pr5-ns pb3 pb5-ns">
+  <% Playlist.order("date desc").all.each do |playlist| %>
+    <%= render partial: 'playlist', locals: { playlist: playlist } %>
+  <% end %>
+</article>
