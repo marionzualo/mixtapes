@@ -1,0 +1,10 @@
+<article class="pl3 pl5-ns pr3 pr5-ns pb3">
+  <h1 class="f3 f1-m f1-l">Playlist Archive</h1>
+  <ul class="list pl0">
+    <% Playlist.ordered.all.each do |playlist| %>
+      <li>
+        <%= render partial: 'playlist', locals: { playlist: playlist } %>
+      </li>
+    <% end %>
+  </ul>
+</article>
