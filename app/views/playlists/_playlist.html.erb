@@ -1,3 +1,5 @@
-<h2><%= playlist.name %></h2>
-<% iframe_url = "https://embed.spotify.com/?uri=#{u playlist.uri}" %>
-<iframe src="<%= "#{iframe_url}" %>" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+<article>
+  <h2 class="f3"><%= playlist.name %></h2>
+  <% iframe_url = "https://embed.spotify.com/?uri=#{u playlist.uri}" %>
+  <iframe src="<%= "#{iframe_url}" %>" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+</article>
